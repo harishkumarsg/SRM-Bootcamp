@@ -1,0 +1,21 @@
+Day 2
+Program 4: maxDistinct
+class Solution () {
+public int maxDistinct(String s) {
+boolean[] seen = new boolean[26];
+int count = 0;
+for(char c: s.toCharArray()){
+if(!seen[c - 'a']{
+count ++;
+seen[c-'a'] = true;
+}
+}
+return count;
+}
+}
+
+examples:
+[a,b] = 2
+[a,a,a] = 1
+[a,b,c,d,e] = 5
+total characters with starting of each character distinctively
