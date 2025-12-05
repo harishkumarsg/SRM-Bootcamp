@@ -1,0 +1,15 @@
+Day 3
+Program 3
+Perfect Squares
+class Solution{
+public int PerfectSqaures(int n){
+int[] dp = new int[n+1];
+for(int i = 1;i <= n; i++){
+int best = Integer.MATH_VALUE;
+for(int j = 1; j*j <= i; j++){
+best = Math.min(best, dp[i - j*j]+1);
+}
+dp[i] = best;
+}
+return dp[n];
+}}
