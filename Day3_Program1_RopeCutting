@@ -1,0 +1,26 @@
+Day 3
+Program 1
+Rope Cutting:
+public class Main
+{
+    public static int RopeCuts(int n, int a, int b, int c){
+        if(n==0) return 0;
+        if(n<0) return -1;
+        
+        int resA = RopeCuts(n-a,a,b,c);
+        int resB = RopeCuts(n-b,a,b,c);
+        int resC = RopeCuts(n-c,a,b,c);
+        int result = Math.max(resA,Math.max(resB,resC));
+        if(result == -1) return -1;
+        return result + 1;
+        
+    }
+	public static void main(String[] args) {
+		int N = 10;
+		int a = 7;
+		int b = 4;
+		int c = 2;
+		int ans = RopeCuts(N, a, b, c);
+		System.out.println(ans);
+	}
+}
